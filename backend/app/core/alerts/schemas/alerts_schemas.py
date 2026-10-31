@@ -3,7 +3,7 @@ from pydantic import BaseModel, ConfigDict, Field
 
 
 class AlertCreateSchema(BaseModel):
-    """Schema for creating a new alert"""
+    """Schema para criar um novo alerta"""
     module: str = Field(..., description="Module that generated the alert", min_length=1, max_length=100)
     title: str = Field(..., description="Alert title", min_length=1, max_length=200)
     message: str = Field(..., description="Alert message content", min_length=1, max_length=1000)
